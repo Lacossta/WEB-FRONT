@@ -1,0 +1,55 @@
+@import url("../assets/fonts/stylesheet.css");
+
+*{
+  font-family: 'Gilroy', Arial, sans-serif;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.line-gray {
+  background-color: #EBEBEB;
+  opacity: 0.2;
+}
+
+.close-ico {
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+
+.ui-error {
+  color: red;
+  font-size: 14px;
+}
+
+.ui-success {
+  color: green;
+  font-size: 14px;
+}
+
+.w-h {
+  min-height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-pages {
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}

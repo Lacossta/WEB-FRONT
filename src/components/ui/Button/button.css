@@ -1,0 +1,20 @@
+.ui-button-outlined {
+    border: 1px solid #d2d2d2;
+    color: #242424;
+    background-color: transparent;
+}
+
+.ui-button-contained {
+    color: #fff;
+    background-image: linear-gradient(0.75turn, rgba(0, 177, 255, 1) 0%, rgba(0, 87, 255, 0.9) 97%);
+}
+
+.ui-button {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 400;
+    border-radius: 60px;
+    padding: 10px 20px;
+
+}

@@ -1,0 +1,41 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth__forms {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auth__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.auth__info-text {
+    font-weight: 600;
+    color: rgba(94, 114, 228);
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    cursor: pointer;
+}
+
+
+.auth__info-text:hover {
+    color: rgba(145, 160, 248);
+}
+
+.auth__btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-weight: 200;
+    border-radius: 5px;
+    background-color: #eb5658;
+    color: white;
+    cursor: pointer;
+}

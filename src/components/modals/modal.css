@@ -1,0 +1,76 @@
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.5);
+}
+
+.modal-base {
+    min-width: 570px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.modal-base::-webkit-scrollbar {
+    background: #ddd;
+    width: 10px;
+}
+
+.modal-base::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+
+
+.modal-base__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    min-height: 64px;
+    padding: 0 24px;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-base__close-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.modal-base__close-btn:before {
+    z-index: 1;
+    top: 0;
+    left: -1px;
+    content:'';
+    position:absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-base__close-btn:hover:before {
+    background-color: #F7F7F7;
+}
+
+.modal-base__content {
+    padding: 24px;
+}
+
+.modal-base__title {
+    line-height: 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
+}
