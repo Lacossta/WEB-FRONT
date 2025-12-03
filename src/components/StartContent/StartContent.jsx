@@ -1,7 +1,7 @@
 import React from 'react';
 import "./startContent.css"
 import tick from "../../assets/tick.svg"
-import pg1 from "../../assets/pg1.png"
+import pg1 from "../../assets/pg1.jpg"
 import check from "../../assets/check.svg"
 import cardmg1 from "../../assets/cardmg1.jpeg"
 import cardmg2 from "../../assets/cardmg2.jpeg"
