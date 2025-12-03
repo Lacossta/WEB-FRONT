@@ -8,8 +8,9 @@ import {useFormik} from "formik";
 import {setTokens} from "../../../utils/tokens";
 import {UserContext} from "../../../context/UserContext";
 import {useNavigate} from "react-router-dom";
-import {login, register} from "../../../api/API";
+import {register} from "../../../api/API";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const RegModal = () => {
     const [error, setError] = useState("")
@@ -18,10 +19,17 @@ const RegModal = () => {
 
     const {isRegShown, setRegShown, isLoginShown, setLoginShown} = useContext(ModalsContext)
 
+    const passwordRules = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
     const validateSchema = Yup.object().shape({
         login: Yup.string().required("Введите логин"),
         email: Yup.string().email("Почта указана не верно"),
-        password: Yup.string().required("Введите пароль"),
+        password: Yup.string()
+            .required("Введите пароль")
+            .matches(
+                passwordRules,
+                "Пароль должен иметь минимальную длину в 8 символов и содержать хотя бы одну заглавную букву, одну цифру и один специальный символ (!@#$%^&*)"
+            ),
         firstName: Yup.string().required("Введите имя"),
         lastName: Yup.string().required("Введите фамилию"),
         phone: Yup.string().required("Введите телефон"),
@@ -75,10 +83,7 @@ const RegModal = () => {
                 break;
             }
         }
-    }, [formik.errors, ]);
-
-
-
+    }, [formik.errors]);
 
     if(isRegShown) return (
         <Modal setOpen={setRegShown} title={"Регистрация"}>
@@ -126,7 +131,8 @@ const RegModal = () => {
                                     disableFuture
                                     dateFormat="dd.MM.yyyy"
                                     onChange={e => {
-                                       formik.setFieldValue("birthDate", new Date(e).getTime())
+                                        // Проверка на null, если пользователь очистил поле
+                                        formik.setFieldValue("birthDate", e ? new Date(e).getTime() : null)
                                     }}
                                 />
                             }
@@ -152,7 +158,7 @@ const RegModal = () => {
                     {
                         !!error && <p className={"ui-error"}>{error}</p>
                     }
-                    <button className={"auth__btn"}>Войти в аккаунт</button>
+                    <button className={"auth__btn"} type="submit">Зарегестрироваться</button>
                 </div>
             </form>
         </Modal>

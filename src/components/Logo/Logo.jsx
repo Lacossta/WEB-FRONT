@@ -9,7 +9,7 @@ const Logo = () => {
     return (
         <div onClick={e => navigate("/")} className={"logo"}>
             <img className={"logo__img"} src={logo} alt={"logo"} />
-            <p className={"logo__title"}>Lang.by</p>
+            <p className={"logo__title"}>SpeakLab.by</p>
         </div>
     );
 };

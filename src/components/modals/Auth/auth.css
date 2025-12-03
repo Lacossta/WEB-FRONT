@@ -25,7 +25,6 @@
     cursor: pointer;
 }
 
-
 .auth__info-text:hover {
     color: rgba(145, 160, 248);
 }
@@ -38,4 +37,20 @@
     background-color: #eb5658;
     color: white;
     cursor: pointer;
+    border: none;
+}
+
+.ui-error {
+    color: #e53935;
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
 }

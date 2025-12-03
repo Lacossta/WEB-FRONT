@@ -19,7 +19,7 @@ const StartContent = () => {
                 <div className={"start-content__intro-main"}>
                     <div className={"start-content__main-info"}>
                         <h1 className={"start-content__main-title"}>ШКОЛА
-                            ИНОСТРАННЫХ<br/> ЯЗЫКОВ lang.by</h1>
+                            ИНОСТРАННЫХ<br/> ЯЗЫКОВ SpeakLab.by</h1>
                         <div className={"start-content__main-abilities"}>
                             <div className={"start-content__main-ability"}>
                                 <img className={"start-content__ability-img"} src={tick}/>

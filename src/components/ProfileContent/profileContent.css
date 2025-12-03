@@ -1,3 +1,4 @@
+/* Основные контейнеры профиля */
 .profile-header {
     padding: 15px 0;
     display: flex;
@@ -19,18 +20,18 @@
     text-align: center;
     border-bottom: 1px solid #eee;
     cursor: pointer;
+    transition: border-bottom 0.2s ease;
 }
-
 
 .profile-header__menu-item:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #aaa;
 }
-
 
 .profile-header__menu-item--active {
     border-bottom: 1px solid #000;
 }
 
+/* Секция основной информации */
 .main-info {
     padding: 20px 0;
     display: flex;
@@ -41,20 +42,38 @@
 
 .main-info__btn {
     align-self: start;
+    margin-top: 10px;
 }
 
-.payment-info{
+/* Секция платежной информации (Используется в компоненте PaymentInfo) */
+.payment-info {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    gap: 12px;
+    width: 40%; /* Можно увеличить до 100% или 500px для мобильных */
+    gap: 15px;
 }
 
 .payment-info__wrapper {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+/* Стили для ошибок (добавлено для корректного отображения error из JS) */
+.ui-error {
+    color: #e53935;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+/* Секция безопасности */
+.security {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 0;
 }
 
 .security__inputs {
@@ -64,13 +83,7 @@
     gap: 10px;
 }
 
-.security {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 25px 0;
-}
-
+/* Карточки купленных курсов */
 .buyed-courses {
     display: flex;
     flex-direction: column;
@@ -87,13 +100,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-width: 1px;
+    border: 1px solid #e0e0e0;
     border-radius: 15px;
     background-color: #ffffff;
-    background-position: center center;
-    border-color: #e0e0e0;
-    border-style: solid;
-    box-shadow: 20px 20px 20px 0px rgba(48,48,48,0);
+    /* Убрал box-shadow с 0 opacity, так как он не виден, но нагружает рендер */
     padding: 15px;
 }
 
@@ -113,4 +123,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+}
+
+/* Хак для react-datepicker, чтобы он занимал всю ширину внутри Input */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+.full-width {
+    width: 100%;
+    /* Добавьте стили вашего стандартного инпута сюда,
+       если DatePicker выглядит иначе, чем остальные поля */
+    border: none;
+    outline: none;
+    background: transparent;
 }

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className={"footer"}>
             <div className={"page-wrapper"}>
                 <div className={"footer__inner"}>
-                    © 2024 Lang.by
+                    © 2024 SpeakLab.by
                 </div>
             </div>
         </div>
